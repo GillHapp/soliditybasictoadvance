@@ -1,24 +1,28 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-contract WithoutUDVT {
-    // ❌ Using primitive types (Mistakes can happen!)
-    uint64 public age;
-    uint64 public weight;
+// ✅ User-Defined Value Types (UDVTs) for strict type safety
+type Age is uint64;
+type Weight is uint64;
 
-    // ❌ No strict type safety (Parameters can be swapped by mistake)
-    function setDetails(uint64 _age, uint64 _weight) public {
-        age = _weight;
-        weight = _age;
+contract WithUDVT {
+    // ✅ State Variables using UDVTs
+    Age public age;
+    Weight public weight;
+
+    // ✅ Function with strict type safety (Prevents mistakes)
+    function setDetails(Age _age, Weight _weight) public {
+        age = _age;
+        weight = _weight;
     }
 
-    // // ❌ Mistake: Age and Weight swapped! But Solidity won't stop it
-    // function wrongExample() public {
-    //     setDetails(70, 25); // ❌ Wrong order (Age should be 25, Weight should be 70)
-    // }
+    // ✅ Getter Functions to Retrieve Data
+    function getAge() public view returns (uint64) {
+        return Age.unwrap(age); // Convert Age back to uint64
+    }
 
-    // // ✅ Correct Usage
-    // function correctExample() public {
-    //     setDetails(25, 70); // ✅ Correct order
-    // }
+    function getWeight() public view returns (uint64) {
+        return Weight.unwrap(weight); // Convert Weight back to uint64
+    }
+
 }
