@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "age",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint64",
+						"name": "_age",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint64",
+						"name": "_weight",
+						"type": "uint64"
+					}
+				],
+				"name": "setDetails",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "weight",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Contract/Udvt.sol": "WithoutUDVT"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Contract/Udvt.sol": {
+			"keccak256": "0x72c82e991bc4b274c03b36641dbe37e59cd8781b24eac2614fb1236a0bf3c65f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fc5e3978df7895e195641e664524f42abea747d67affff0692c81da9064dcd22",
+				"dweb:/ipfs/QmehBy17qD4KMQDZGT13dQxKNfShwLrnfYQBaGTAPfU2w5"
+			]
+		}
+	},
+	"version": 1
+}
