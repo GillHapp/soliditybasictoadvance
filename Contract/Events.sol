@@ -10,9 +10,3 @@ contract IndexedEventExample {
 }
 
 // Button==address => to , value
-
-contractInstance.getPastEvents("Transfer", {
-    filter: { from: "0x123..." }, 
-    fromBlock: 0,
-    toBlock: "latest"
-}).then(console.log);
