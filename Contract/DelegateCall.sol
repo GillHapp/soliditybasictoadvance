@@ -56,3 +56,9 @@ contract A {
         emit CallResponse(success, data);
     }
 }
+
+// when am deleing with direct call which cause the msg.sender = contract which is calling that function
+// cause the parent contract storage is modified and child contract storage is set 
+
+// vice a versa with the delegate call , here cause state modification is only happend
+// with the child contract so the msg.sender is who is calling that function 
