@@ -30,6 +30,10 @@ contract visibilty{
         return "External Function Called";
     }
 
+    // function test_externalfunc() external pure returns (string memory){
+    //     return externalFunc();
+    // }
+
 //     function test_externalfunc() public pure returns(string memory){
 //         return externalFunc();
 // }
@@ -40,5 +44,9 @@ contract isVisibilty is visibilty{
     string public  _str = internalFunc();
     string public Str = publicFunc();
     // string public ExStr = externalFunc()
+
+    // function TestExternalFunctionCall() payable external returns (string memory) {
+    //     return externalFunc(); // not able to call here as well
+    // }
 
 }
